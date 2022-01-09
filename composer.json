@@ -1,0 +1,54 @@
+{
+    "name": "eskiell/focus-subscription",
+    "description": " subscription pack",
+    "keywords": [
+        "eskiell",
+        "focus-subscription"
+    ],
+    "homepage": "https://github.com/eskiell/focus-subscription",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Eskiel technology",
+            "email": "eskiel@icloud.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eskiell\\FocusSubscription\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eskiell\\FocusSubscription\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eskiell\\FocusSubscription\\FocusSubscriptionServiceProvider"
+            ],
+            "aliases": {
+                "FocusSubscription": "Eskiell\\FocusSubscription\\FocusSubscriptionFacade"
+            }
+        }
+    }
+}
